@@ -1,0 +1,11 @@
+{
+  "name": "napoli-pizza",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./src/output.css --minify",
+    "start": "echo 'Render will serve index.html'"
+  },
+  "dependencies": {
+    "tailwindcss": "^4.1.17"
+  }
+}
