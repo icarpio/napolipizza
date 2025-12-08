@@ -52,9 +52,11 @@
 
 <!-- Details -->
 <section class="py-16 px-6 md:px-10 bg-[#fffaf7]" id="details">
-  <div class="max-w-5xl mx-auto">
+  <div class="max-w-5xl mx-auto text-center">
     <h2 class="text-[#1b120e] text-3xl font-bold leading-tight tracking-tight mb-12 text-center">What You'll Learn</h2>
-    <div id="learning-cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div id="learning-cards" class="grid grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+
+    
       <!-- JS will populate this -->
     </div>
   </div>
@@ -74,7 +76,9 @@
 <section class="py-16 px-6 md:px-10 bg-[#fffaf7]" id="testimonials">
   <div class="max-w-5xl mx-auto">
     <h2 class="text-[#1b120e] text-3xl font-bold leading-tight tracking-tight mb-12 text-center">Voices of Our Pizzeria Pros</h2>
-    <div id="testimonial-cards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div id="testimonial-cards" class="grid grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+
+
       <!-- JS will populate this -->
     </div>
   </div>
@@ -110,8 +114,8 @@
       Haz tu pedido
     </h2>
 
-    <!-- Botón cerrar -->
-    <button id="closeModal"
+    <!-- Botón cerrar (X) -->
+    <button id="closeModalX"
       style="
         position:absolute;
         top:12px; right:12px;
@@ -173,7 +177,8 @@
         Enviar Pedido
       </button>
 
-      <button type="button" id="closeModal"
+      <!-- Botón Cerrar dentro del formulario -->
+      <button type="button" id="closeModalBtn"
         style="
           padding:10px;
           background:#e6dbd6;
@@ -192,23 +197,26 @@
   </div>
 </div>
 
-
-
 <script>
 const modal = document.getElementById('orderModal');
+
+// Abrir modal (botón externo con id openOrderModal)
 document.querySelectorAll('#openOrderModal').forEach(btn => {
-  btn.onclick = () => modal.style.display = 'flex';  // CENTRADO
+  btn.onclick = () => modal.style.display = 'flex';
 });
 
-document.getElementById('closeModal').onclick = () => modal.style.display = 'none';
+// Cerrar modal
+document.getElementById('closeModalX').onclick = () => modal.style.display = 'none';
+document.getElementById('closeModalBtn').onclick = () => modal.style.display = 'none';
 
+// Enviar formulario
 document.getElementById('orderForm').onsubmit = async (e) => {
   e.preventDefault();
   const formData = Object.fromEntries(new FormData(e.target));
   formData.quantity = parseInt(formData.quantity);
-  formData.pizza = parseInt(formData.pizza); // debe ser ID
+  formData.pizza = parseInt(formData.pizza);
 
-  const response = await fetch('api9/order/', {
+  const response = await fetch('api4/order/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(formData)
@@ -220,7 +228,6 @@ document.getElementById('orderForm').onsubmit = async (e) => {
 };
 </script>
 
-<!-- Modal END -->
 </main>
 
 <!-- Footer -->
@@ -275,6 +282,7 @@ const learnings = [
   { icon: 'local_pizza', title: 'Dough Perfection', description: 'Master the art of crafting the perfect dough, from mixing to proofing, ensuring a light and airy crust.' },
   { icon: 'gesture', title: 'Traditional Techniques', description: 'Learn the time-honored techniques of Neapolitan pizza making, including hand-stretching and topping application.' },
   { icon: 'outdoor_grill', title: 'Baking Mastery', description: 'Discover the secrets to achieving a perfectly baked pizza in a wood-fired oven, with a crispy crust and bubbly edges.' }
+  
 ];
 const learningContainer = document.getElementById('learning-cards');
 learnings.forEach(item => {
