@@ -261,7 +261,7 @@ document.getElementById('orderForm').onsubmit = async (e) => {
     });
   });
 
-  const response = await fetch('http://127.0.0.1:8000/api4/order/', {
+  const response = await fetch('https://albertaapi.onrender.com/api4/order/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(formData)
