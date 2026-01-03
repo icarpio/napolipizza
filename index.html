@@ -3,7 +3,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
 <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Serif%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-<title>Stitch Design</title>
+<title>Pizza Napoli</title>
 <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
 <meta charset="utf-8"/>
 <link href="src/output.css" rel="stylesheet"/>
@@ -17,20 +17,24 @@
 <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f3ebe7] px-10 py-4 shadow-sm">
   <div class="flex items-center gap-3 text-[#1b120e]">
     <span class="material-icons text-3xl text-[#ce5316]">local_pizza</span>
-    <h2 class="text-[#1b120e] text-2xl font-bold leading-tight tracking-tight">Napoli Pizza Elite</h2>
+    <h2 class="text-[#1b120e] text-2xl font-bold leading-tight tracking-tight">Napoli Pizza</h2>
   </div>
   <div class="flex flex-1 justify-end gap-6">
-    <nav class="flex items-center gap-6">
+    <!-- <nav class="flex items-center gap-6">
       <a class="text-[#4e3f37] hover:text-[#ce5316] text-base font-medium leading-normal transition-colors" href="#about">About</a>
       <a class="text-[#4e3f37] hover:text-[#ce5316] text-base font-medium leading-normal transition-colors" href="#details">Class Details</a>
       <a class="text-[#4e3f37] hover:text-[#ce5316] text-base font-medium leading-normal transition-colors" href="#testimonials">Testimonials</a>
       <a class="text-[#4e3f37] hover:text-[#ce5316] text-base font-medium leading-normal transition-colors" href="#contact">Contact</a>
-    </nav>
+    </nav>-->
+    <button id="openMenuModal" class="flex min-w-[100px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-11 px-6 bg-[#ce5316] text-[#fcf9f8] text-base font-bold leading-normal tracking-[0.015em] hover:bg-[#b84914] transition-colors shadow-md hover:shadow-lg">
+      <span class="truncate">Menu</span>
+    </button>
     <button id="openOrderModal" class="flex min-w-[100px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-11 px-6 bg-[#ce5316] text-[#fcf9f8] text-base font-bold leading-normal tracking-[0.015em] hover:bg-[#b84914] transition-colors shadow-md hover:shadow-lg">
-      <span class="truncate">Book Now</span>
+      <span class="truncate">Pide ahora</span>
     </button>
   </div>
 </header>
+
 
 <main class="flex-1">
 
@@ -39,12 +43,12 @@
   <div class="absolute inset-0 bg-black/50 z-0"></div>
   <div class="min-h-[560px] bg-cover bg-center bg-no-repeat flex items-center justify-center p-8" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBeq6iveYyDaDfIDQ94PQH8s3G_NMtTSbF6zqXyuFEcAgHRHWfIHa8SsAvL2jWRd2usYTVT9VZXUJTbooth9YFyzkl3cOmelM0Xpr5YbSZlpYwYyevkEJhI1XWd6GYNPuWqLSm-axAHrvo6JzdvNxAMdVsXj0sQLfz1xWZkL9etKyW4yTsAmKuaIXMkUaPyqupAPSoxhHDdXVMYb17mLqmvtfsffLyzUbzgtT0Ohdg5_oeLx9c3m7b2KJQXFVobPyaBpD-gTg0LVNo");'>
     <div class="relative z-10 flex flex-col gap-6 text-center max-w-3xl">
-      <h1 class="text-white text-5xl font-black leading-tight tracking-tighter md:text-6xl">Master the Art of Neapolitan Pizza</h1>
+      <h1 class="text-white text-5xl font-black leading-tight tracking-tighter md:text-6xl">El Arte de la Pizza Napolitana</h1>
       <p class="text-gray-200 text-lg font-normal leading-relaxed md:text-xl">
-        Join our exclusive, once-a-year cooking class in Naples and learn the secrets of authentic homemade pizza from a renowned chef.
+        Ven a nuestra pizzería y descubre los secretos de la auténtica pizza napolitana hecha a mano por nuestros expertos pizzeros.
       </p>
       <button id="openOrderModal" class="self-center flex min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-8 bg-[#ce5316] text-[#fcf9f8] text-lg font-bold leading-normal tracking-[0.015em] hover:bg-[#b84914] transition-colors shadow-lg hover:shadow-xl">
-        <span class="truncate">Book Your Spot</span>
+        <span class="truncate">Haz tu pedido</span>
       </button>
     </div>
   </div>
@@ -53,7 +57,7 @@
 <!-- Details -->
 <section class="py-16 px-6 md:px-10 bg-[#fffaf7]" id="details">
   <div class="max-w-5xl mx-auto text-center">
-    <h2 class="text-[#1b120e] text-3xl font-bold leading-tight tracking-tight mb-12 text-center">What You'll Learn</h2>
+    <h2 class="text-[#1b120e] text-3xl font-bold leading-tight tracking-tight mb-12 text-center">Descubre nuestro sabor</h2>
     <div id="learning-cards" class="grid grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
 
     
@@ -65,9 +69,12 @@
 <!-- About -->
 <section class="py-16 px-6 md:px-10 bg-[#fcf9f8]" id="about">
   <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-[#1b120e] text-3xl font-bold leading-tight tracking-tight mb-8">The History of Neapolitan Pizza</h2>
+    <h2 class="text-[#1b120e] text-3xl font-bold leading-tight tracking-tight mb-8">La historia de la pizza napolitana</h2>
     <p class="text-[#4e3f37] text-lg font-normal leading-loose">
-      Neapolitan pizza, a culinary icon originating from Naples, Italy, boasts a rich history dating back to the 18th century. Initially a simple flatbread topped with lard, salt, and garlic, it evolved with the introduction of tomatoes from the New World. By the late 19th century, the classic Margherita pizza emerged, honoring Queen Margherita of Savoy with its red (tomato), white (mozzarella), and green (basil) toppings, mirroring the Italian flag. Today, Neapolitan pizza is celebrated globally for its simplicity, quality ingredients, and traditional preparation methods, including baking in a wood-fired oven at high temperatures.
+     La pizza napolitana, un verdadero ícono culinario originario de Nápoles, Italia, tiene una historia que se remonta al siglo XVIII. Lo que comenzó como una masa sencilla con manteca, sal y ajo, evolucionó con la llegada del tomate desde el Nuevo Mundo.
+      A finales del siglo XIX nació la clásica Pizza Margherita, creada en honor a la Reina Margherita de Saboya y preparada con tomate, mozzarella y albahaca: los colores de la bandera italiana.
+      Hoy en día, la pizza napolitana es famosa en todo el mundo por su sencillez, sus ingredientes de calidad y su método tradicional de preparación en horno de leña a altas temperaturas.
+      En nuestro restaurante mantenemos viva esta tradición, elaborando nuestras pizzas con técnicas auténticas y productos cuidadosamente seleccionados para ofrecerte el verdadero sabor de Nápoles.
     </p>
   </div>
 </section>
@@ -75,7 +82,7 @@
 <!-- Testimonials -->
 <section class="py-16 px-6 md:px-10 bg-[#fffaf7]" id="testimonials">
   <div class="max-w-5xl mx-auto">
-    <h2 class="text-[#1b120e] text-3xl font-bold leading-tight tracking-tight mb-12 text-center">Voices of Our Pizzeria Pros</h2>
+    <h2 class="text-[#1b120e] text-3xl font-bold leading-tight tracking-tight mb-12 text-center">Testimonios</h2>
     <div id="testimonial-cards" class="grid grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
 
 
@@ -141,22 +148,32 @@
       <input type="text" name="customer_phone" placeholder="Teléfono" required
         style="padding:12px; border-radius:10px; border:1px solid #e7d7d0; font-size:16px;" />
 
-      <label style="font-weight:600; color:#1b120e;">Pizza:</label>
+      <label style="font-weight:600; color:#1b120e;">Pizzas:</label>
 
-      <select name="pizza" required
-        style="padding:12px; border-radius:10px; border:1px solid #e7d7d0; font-size:16px;">
-        <option value="1">Margherita</option>
-        <option value="2">Pepperoni</option>
-        <option value="3">Hawaiana</option>
-        <option value="4">Cuatro Quesos</option>
-        <option value="5">Vegetariana</option>
-        <option value="6">Funghi</option>
-        <option value="7">Diavola</option>
-        <option value="8">Calzone</option>
-      </select>
+      <div id="pizzaContainer">
+        <div class="pizzaItem" style="display:flex; gap:8px; align-items:center; margin-bottom:8px;">
+          <select name="pizza" required style="flex:1; padding:8px; border-radius:10px; border:1px solid #e7d7d0;">
+            <option value="1">Margherita</option>
+            <option value="2">Pepperoni</option>
+            <option value="3">Hawaiana</option>
+            <option value="4">Cuatro Quesos</option>
+            <option value="5">Vegetariana</option>
+            <option value="6">Funghi</option>
+            <option value="7">Diavola</option>
+            <option value="8">Calzone</option>
+          </select>
+          <input type="number" name="quantity" value="1" min="1" max="20"
+            style="width:60px; padding:8px; border-radius:10px; border:1px solid #e7d7d0;" />
+          <button type="button" class="removePizza" style="padding:6px 10px; border:none; border-radius:8px; background:#e6dbd6; cursor:pointer;">✕</button>
+        </div>
+      </div>
 
-      <input type="number" name="quantity" placeholder="Cantidad" min="1" max="20" value="1" required
-        style="padding:12px; border-radius:10px; border:1px solid #e7d7d0; font-size:16px;" />
+      <button type="button" id="addPizza"
+        style="padding:10px; background:#ce5316; border:none; color:white; font-weight:700; border-radius:10px; cursor:pointer;"
+        onmouseover="this.style.background='#b84914'"
+        onmouseout="this.style.background='#ce5316'">
+        Agregar otra pizza
+      </button>
 
       <textarea name="message" placeholder="Mensaje adicional (opcional)"
         style="padding:12px; border-radius:10px; border:1px solid #e7d7d0; font-size:16px;"></textarea>
@@ -177,7 +194,6 @@
         Enviar Pedido
       </button>
 
-      <!-- Botón Cerrar dentro del formulario -->
       <button type="button" id="closeModalBtn"
         style="
           padding:10px;
@@ -200,7 +216,7 @@
 <script>
 const modal = document.getElementById('orderModal');
 
-// Abrir modal (botón externo con id openOrderModal)
+// Abrir modal
 document.querySelectorAll('#openOrderModal').forEach(btn => {
   btn.onclick = () => modal.style.display = 'flex';
 });
@@ -209,42 +225,199 @@ document.querySelectorAll('#openOrderModal').forEach(btn => {
 document.getElementById('closeModalX').onclick = () => modal.style.display = 'none';
 document.getElementById('closeModalBtn').onclick = () => modal.style.display = 'none';
 
+// Agregar nueva pizza
+document.getElementById('addPizza').onclick = () => {
+  const container = document.getElementById('pizzaContainer');
+  const newItem = container.firstElementChild.cloneNode(true);
+  newItem.querySelector('input').value = 1;
+  container.appendChild(newItem);
+
+  // Botón eliminar
+  newItem.querySelector('.removePizza').onclick = () => newItem.remove();
+};
+
+// Eliminar pizza existente
+document.querySelectorAll('.removePizza').forEach(btn => {
+  btn.onclick = (e) => e.target.parentElement.remove();
+});
+
 // Enviar formulario
 document.getElementById('orderForm').onsubmit = async (e) => {
   e.preventDefault();
-  const formData = Object.fromEntries(new FormData(e.target));
-  formData.quantity = parseInt(formData.quantity);
-  formData.pizza = parseInt(formData.pizza);
+  const form = e.target;
 
-  const response = await fetch('api4/order/', {
+  const formData = {
+    customer_name: form.customer_name.value,
+    customer_email: form.customer_email.value,
+    customer_phone: form.customer_phone.value,
+    message: form.message.value,
+    items: []
+  };
+
+  document.querySelectorAll('#pizzaContainer .pizzaItem').forEach(item => {
+    formData.items.push({
+      pizza: parseInt(item.querySelector('select').value),
+      quantity: parseInt(item.querySelector('input').value)
+    });
+  });
+
+  const response = await fetch('http://127.0.0.1:8000/api4/order/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(formData)
   });
 
   const result = await response.json();
-  alert(result.success ? 'Pedido enviado correctamente' : 'Error: ' + JSON.stringify(result.errors));
-  if(result.success) modal.style.display = 'none';
+  if(result.success) {
+    alert('Pedido enviado correctamente');
+    
+    // Cerrar modal
+    modal.style.display = 'none';
+
+    // Resetear formulario
+    form.reset();
+
+    // Mantener solo el primer item de pizza y limpiar cantidades
+    const container = document.getElementById('pizzaContainer');
+    container.innerHTML = '';
+    const firstItem = document.createElement('div');
+    firstItem.className = 'pizzaItem';
+    firstItem.style = "display:flex; gap:8px; align-items:center; margin-bottom:8px;";
+    firstItem.innerHTML = `
+      <select name="pizza" required style="flex:1; padding:8px; border-radius:10px; border:1px solid #e7d7d0;">
+        <option value="1">Margherita</option>
+        <option value="2">Pepperoni</option>
+        <option value="3">Hawaiana</option>
+        <option value="4">Cuatro Quesos</option>
+        <option value="5">Vegetariana</option>
+        <option value="6">Funghi</option>
+        <option value="7">Diavola</option>
+        <option value="8">Calzone</option>
+      </select>
+      <input type="number" name="quantity" value="1" min="1" max="20"
+        style="width:60px; padding:8px; border-radius:10px; border:1px solid #e7d7d0;" />
+      <button type="button" class="removePizza" style="padding:6px 10px; border:none; border-radius:8px; background:#e6dbd6; cursor:pointer;">✕</button>
+    `;
+    container.appendChild(firstItem);
+
+    // Agregar funcionalidad al botón eliminar
+    firstItem.querySelector('.removePizza').onclick = () => firstItem.remove();
+
+  } else {
+    alert('Error: ' + JSON.stringify(result.errors));
+  }
 };
+
 </script>
 
-</main>
+
+
+<!-- Modal del menú -->
+<div id="menuModal" 
+      style="
+            display:none;
+            position:fixed;
+            top:0; left:0;
+            width:100%; height:100%;
+            background:rgba(0,0,0,0.6);
+            align-items:center;
+            justify-content:center;
+            z-index:9999;
+      ">
+
+  <div style="
+        background:#fdf7f4;
+        padding:30px;
+        max-width:500px;
+        width:90%;
+        border-radius:16px;
+        position:relative;
+        border:1px solid #e7d7d0;
+        box-shadow:0 10px 40px rgba(0,0,0,0.25);
+        font-family:'Noto Serif','Noto Sans',sans-serif;
+      ">
+
+    <h2 style="margin-bottom:20px; font-size:24px; font-weight:700; color:#1b120e; text-align:center;">
+      Menú de Pizzas
+    </h2>
+
+    <!-- Botón cerrar -->
+    <button id="closeMenuModal"
+      style="
+        position:absolute;
+        top:12px; right:12px;
+        background:none;
+        border:none;
+        font-size:20px;
+        color:#a08878;
+        cursor:pointer;
+      "
+      onmouseover="this.style.color='#ce5316'"
+      onmouseout="this.style.color='#a08878'">
+      ✕
+    </button>
+
+    <div id="menuContent" style="display:flex; flex-direction:column; gap:12px; max-height:400px; overflow-y:auto;">
+      <!-- Contenido cargado dinámicamente -->
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+const menuModal = document.getElementById('menuModal');
+const menuContent = document.getElementById('menuContent');
+
+// Abrir modal
+document.getElementById('openMenuModal').onclick = async () => {
+  menuModal.style.display = 'flex';
+  menuContent.innerHTML = '';
+
+  try {
+    const response = await fetch('http://127.0.0.1:8000/api4/menu/');
+    const pizzas = await response.json();
+
+    pizzas.forEach(pizza => {
+      const div = document.createElement('div');
+      div.style.border = '1px solid #e7d7d0';
+      div.style.padding = '10px';
+      div.style.borderRadius = '10px';
+      div.style.background = '#fff6f3';
+      div.innerHTML = `
+        <h3 style="margin:0 0 5px 0; font-size:18px; color:#1b120e;">
+          ${pizza.name} - $${Number(pizza.price).toFixed(2)}
+        </h3>
+        <p style="margin:0; color:#5a463b; font-size:14px;">${pizza.description || ''}</p>
+      `;
+      menuContent.appendChild(div);
+    });
+
+  } catch (err) {
+    console.error("Error cargando menú:", err); // <-- para debug
+    menuContent.innerHTML = '<p style="color:red;">Error al cargar el menú.</p>';
+  }
+};
+
+// Cerrar modal
+document.getElementById('closeMenuModal').onclick = () => menuModal.style.display = 'none';
+</script>
 
 <!-- Footer -->
 <footer class="bg-[#1b120e] text-[#fdf7f4] py-12 px-6 md:px-10" id="contact">
   <div class="max-w-5xl mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
       <div>
-        <h3 class="text-xl font-bold mb-3">Napoli Pizza Elite</h3>
-        <p class="text-sm text-gray-400 leading-relaxed">Experience the authentic taste of Naples. <br/>Learn from the best, once a year.</p>
+        <h3 class="text-xl font-bold mb-3">Napoli Pizza</h3>
+        <p class="text-sm text-gray-400 leading-relaxed">Siente el auténtico sabor de Nápoles.<br/> Disfruta con nuestras auténticas pizzas napolitanas.</p>
       </div>
       <div>
-        <h3 class="text-xl font-bold mb-3">Quick Links</h3>
+        <h3 class="text-xl font-bold mb-3"></h3>
         <ul class="space-y-2">
-          <li><a class="hover:text-[#ce5316] transition-colors text-gray-300" href="#about">About the Class</a></li>
-          <li><a class="hover:text-[#ce5316] transition-colors text-gray-300" href="#details">What You'll Learn</a></li>
-          <li><a class="hover:text-[#ce5316] transition-colors text-gray-300" href="#testimonials">Testimonials</a></li>
-          <li><a class="hover:text-[#ce5316] transition-colors text-gray-300" href="#">Book Your Spot</a></li>
+          <li><a class="hover:text-[#ce5316] transition-colors text-gray-300" href="#about">Pizza Napilitana</a></li>
+          <li><a class="hover:text-[#ce5316] transition-colors text-gray-300" href="#details">Sobre nosotros</a></li>
+          <li><a class="hover:text-[#ce5316] transition-colors text-gray-300" href="#testimonials">Testimonios</a></li>
+          <li><a class="hover:text-[#ce5316] transition-colors text-gray-300" href="#">Haz tu pedido</a></li>
         </ul>
       </div>
       <div>
@@ -264,11 +437,11 @@ document.getElementById('orderForm').onsubmit = async (e) => {
             <span class="material-icons text-3xl">email</span>
           </a>
         </div>
-        <p class="text-sm text-gray-400">info@napolipizzaelite.it</p>
+        <p class="text-sm text-gray-400">info@napolipizzamail.com</p>
       </div>
     </div>
     <div class="mt-10 border-t border-gray-700 pt-8 text-center">
-      <p class="text-gray-400 text-sm">© 2024 Napoli Pizza Elite. All rights reserved. <a class="hover:text-[#ce5316] transition-colors" href="#">Privacy Policy</a> | <a class="hover:text-[#ce5316] transition-colors" href="#">Terms of Service</a></p>
+      <p class="text-gray-400 text-sm">© 2025 Napoli Pizza. All rights reserved. <a class="hover:text-[#ce5316] transition-colors" href="#">Privacy Policy</a> | <a class="hover:text-[#ce5316] transition-colors" href="#">Terms of Service</a></p>
     </div>
   </div>
 </footer>
@@ -277,26 +450,40 @@ document.getElementById('orderForm').onsubmit = async (e) => {
 </div>
 
 <script>
-// JS Dinámico para "What You'll Learn"
-const learnings = [
-  { icon: 'local_pizza', title: 'Dough Perfection', description: 'Master the art of crafting the perfect dough, from mixing to proofing, ensuring a light and airy crust.' },
-  { icon: 'gesture', title: 'Traditional Techniques', description: 'Learn the time-honored techniques of Neapolitan pizza making, including hand-stretching and topping application.' },
-  { icon: 'outdoor_grill', title: 'Baking Mastery', description: 'Discover the secrets to achieving a perfectly baked pizza in a wood-fired oven, with a crispy crust and bubbly edges.' }
-  
+// JS Dinámico para "Lo que ofrecemos"
+const offerings = [
+  { 
+    icon: 'local_pizza', 
+    title: 'Pizzas Artesanales', 
+    description: 'Disfruta de nuestras pizzas elaboradas con masa fresca, ingredientes de primera calidad y sabores auténticos de Nápoles.' 
+  },
+  { 
+    icon: 'emoji_food_beverage', 
+    title: 'Ingredientes Frescos', 
+    description: 'Seleccionamos cuidadosamente cada ingrediente para garantizar sabor, frescura y autenticidad en cada bocado.' 
+  },
+  { 
+    icon: 'restaurant', 
+    title: 'Horno de Leña', 
+    description: 'Nuestras pizzas se cocinan en horno de leña a alta temperatura, logrando una corteza crujiente y un sabor inigualable.' 
+  }
 ];
-const learningContainer = document.getElementById('learning-cards');
-learnings.forEach(item => {
+
+const offeringContainer = document.getElementById('learning-cards'); // Manteniendo el mismo contenedor
+offerings.forEach(item => {
   const card = document.createElement('div');
   card.className = 'flex flex-col gap-4 rounded-xl border border-[#e7d7d0] bg-white p-6 shadow-lg hover:shadow-xl';
   card.innerHTML = `
-    <div class="text-[#ce5316] flex items-center justify-center bg-[#fdf7f4] rounded-full size-16 mb-2">
-      <span class="material-icons text-4xl">${item.icon}</span>
-    </div>
-    <h3 class="text-[#1b120e] text-xl font-bold">${item.title}</h3>
-    <p class="text-[#6b5b52] text-base">${item.description}</p>
-  `;
-  learningContainer.appendChild(card);
+  <div class="flex items-center justify-center bg-[#fdf7f4] rounded-full w-16 h-16 mb-4 mx-auto">
+    <span class="material-icons text-4xl text-[#ce5316]">${item.icon}</span>
+  </div>
+  <h3 class="text-[#1b120e] text-xl font-bold text-center">${item.title}</h3>
+  <p class="text-[#6b5b52] text-base text-center">${item.description}</p>
+`;
+
+  offeringContainer.appendChild(card);
 });
+
 
 // JS Dinámico para "Testimonials"
 const testimonials = [
